@@ -24,4 +24,4 @@ The tutorials can be found at:
 2.	http://wiki.ros.org/urdf/Tutorials/Building%20a%20Movable%20Robot%20Model%20with%20URDF
 3.	http://wiki.ros.org/urdf/Tutorials/Using%20Xacro%20to%20Clean%20Up%20a%20URDF%20File
 
-The OMTP factory world can be inspected in the omtp course files lecture 1 2022 folder which contains the meshes, XACRO files and more. 
+The OMTP factory world can be inspected in the ''' ../omtp course files lecture 1 2022 ''' folder which contains the meshes, XACRO files and more. 
