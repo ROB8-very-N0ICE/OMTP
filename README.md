@@ -25,3 +25,4 @@ The tutorials can be found at:
 3.	http://wiki.ros.org/urdf/Tutorials/Using%20Xacro%20to%20Clean%20Up%20a%20URDF%20File
 
 The OMTP factory world can be inspected in the ``` .../omtp course files lecture 1 2022/ ``` folder which contains the meshes, XACRO files and more. 
+Rebuilding the OMTP factory is accomplished by editing the XACRO file of the factory. The XACRO file is found at ``` .../omtp course files lecture 1 2022/omtp_support/urdf/omtp_factory.xacro. ```
