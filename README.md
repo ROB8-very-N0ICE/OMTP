@@ -2,7 +2,7 @@
 
 This repository is part of the Object Manipulation and Task Planning course. The repository contains the solution to the assignments given in the course. Each lecture has their own section in the README. In each lecture section the solution to the assignment in the specific lecture is detailed further. Installation of necessary packages, usage of the code and error handling is elaborated on in the lecture sections.
 
-### Lecture 1
+## Lecture 1
 
 This Lecture took place 03/02-22 and was the lecture 1/12. The assignment entailed:
 
@@ -12,11 +12,11 @@ This Lecture took place 03/02-22 and was the lecture 1/12. The assignment entail
 4.	Rebuild the OMTP factory world
 5.	Write documentation
 
-#### Installation
+### Installation
 
 A zip file is provided in the lecture which contains all the necessary packages and additional installation is not required. The zip file should be unzipped in src in your catkin workspace.
 
-#### Usage
+### Usage
 
 The tutorials can be found at:
 
