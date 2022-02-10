@@ -12,11 +12,11 @@ This Lecture took place 03/02-22 and was the lecture 1/12. The assignment entail
 4.	Rebuild the OMTP factory world
 5.	Write documentation
 
-### Installation
+##### Installation
 
 A zip file is provided in the lecture which contains all the necessary packages and additional installation is not required. The zip file should be unzipped in src in your catkin workspace.
 
-### Usage
+##### Usage
 
 The tutorials can be found at:
 
