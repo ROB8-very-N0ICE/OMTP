@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<robot name="nurse_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="nurse_urdf" params="nurse_prefix nurse_parent *origin">
+
+    <!-- Links -->
+    <link name="${nurse_prefix}_nurse">
+      <visual>
+        <geometry>
+          <mesh filename="package://aau_lab_ros_models/meshes/nurse/nurse.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://aau_lab_ros_models/meshes/nurse/nurse.dae"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="1.0" ixy="0" ixz="0"
+                 iyy="1.0" iyz="0"
+                 izz="1.0" />
+        <mass value="25" />
+      </inertial>
+    </link>
+
+    <joint name="${nurse_prefix}_to_world_interface" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${nurse_parent}" />
+      <child link="${nurse_prefix}_nurse" />
+    </joint>
+  </xacro:macro>
+</robot>

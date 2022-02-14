@@ -1,0 +1,8 @@
+prefix=/home/wizard/Documents/Escola/AAU/Master/8_semester/Object_manipulation_and_task_planning/OMTP/devel
+
+Name: omtp_support
+Description: Description of omtp_support
+Version: 0.0.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

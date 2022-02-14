@@ -1,0 +1,8 @@
+prefix=/home/wizard/Documents/Escola/AAU/Master/8_semester/Object_manipulation_and_task_planning/OMTP/devel
+
+Name: omtp_lecture2
+Description: Description of omtp_lecture2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
