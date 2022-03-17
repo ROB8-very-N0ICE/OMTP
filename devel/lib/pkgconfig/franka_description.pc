@@ -1,8 +1,0 @@
-prefix=/home/wizard/Documents/Escola/AAU/Master/8_semester/Object_manipulation_and_task_planning/OMTP/devel
-
-Name: franka_description
-Description: Description of franka_description
-Version: 0.7.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: xacro
