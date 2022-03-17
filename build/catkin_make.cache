@@ -1,2 +1,0 @@
-joint_state_publisher/joint_state_publisher:joint_state_publisher/joint_state_publisher_gui:omtp_lecture1/aau_lab_ros_models:omtp_lecture1/franka_description:omtp_lecture1/omtp_support:omtp_lecture1/urdf_tutorial:omtp_lecture2
--DCATKIN_DEVEL_PREFIX=/home/wizard/Documents/Escola/AAU/Master/8_semester/Object_manipulation_and_task_planning/OMTP/devel -DCMAKE_INSTALL_PREFIX=/home/wizard/Documents/Escola/AAU/Master/8_semester/Object_manipulation_and_task_planning/OMTP/install -G Unix Makefiles
