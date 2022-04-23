@@ -40,4 +40,8 @@
     <arg name="load_robot_description" value="false" />
     <arg name="moveit_controller_manager" value="ros_control" />
   </include>
+
+
+   <node name="lecture5_pick_and_place" pkg="omtp_lecture2" type="lecture5_pick_and_place.py" respawn="false" output="screen">
+    </node>
 </launch>

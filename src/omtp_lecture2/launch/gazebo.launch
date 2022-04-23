@@ -32,6 +32,10 @@
  <!-- Load ROS controllers -->
  <include file="$(find omtp_factory_moveit)/launch/ros_controllers.launch"/>
 
+ <node name="lecture5_pick_and_place" pkg="omtp_lecture2" type="lecture5_pick_and_place.py" respawn="false" output="screen">
+  </node>
+
+
 
 
 </launch>
