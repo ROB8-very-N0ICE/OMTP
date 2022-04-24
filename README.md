@@ -26,7 +26,13 @@ The tutorials can be found at:
 3.	http://wiki.ros.org/urdf/Tutorials/Using%20Xacro%20to%20Clean%20Up%20a%20URDF%20File
 
 The OMTP factory world can be inspected in the ``` .../omtp course files lecture 1 2022/ ``` folder in this repository which contains the meshes, XACRO files and more. 
-Rebuilding the OMTP factory is accomplished by editing the XACRO file of the factory. The XACRO file is found at ``` .../omtp course files lecture 1 2022/omtp_support/urdf/omtp_factory.xacro. ``` The second robot arm is added similar to first one, the bins and ballet are added as modules in the XACRO file. To view the complete factory in RVIZ download this repository and unzip it into src in the catkin workspace and then type the following commands into terminal:
+Rebuilding the OMTP factory is accomplished by editing the XACRO file of the factory. The XACRO file is found at ``` .../omtp course files lecture 1 2022/omtp_support/urdf/omtp_factory.xacro. ``` The second robot arm is added similar to first one, the bins and ballet are added as modules in the XACRO file. 
+  
+The two robot arms added were the panda manipulators, which can be found from line 41 to 519 for the first panda arm, and the second panda arm being from line 520 to 992, where the eight links are described with a cylinder length, radius, and origin for the two end points. Along with the links, the joints are also described. They contain information about the individual joints rotation position and which links they are connected to, as well as their velocity limit and damping. The links and joints for the end effectors were also added for the two panda arms. Two for each arm. Amongst those two panda arms, seven modules were also added and connected to one another in line 1057 to 1225, describing the specific model, their origin point, and which module they are connected to. The modules consists of five modules with a conveyor belt going straight forward, one in a T shape, and the last one containing a closed off workstation. Additionally, a wooden pellet and a nurse were added in fron of the factory at line 1236 to line 1282, containing a origin, model and inertia. A screenshot titled lecture1exercise can be found in the folder named "pictures".
+
+  
+  
+  To view the complete factory in RVIZ download this repository and unzip it into src in the catkin workspace and then type the following commands into terminal:
 ```
 cd catkin_ws/
 source devel/setup.bash
