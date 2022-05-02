@@ -44,5 +44,16 @@ Afterwards the complete factory should be displayed in RVIZ.
 
 
 ## Lecture 2
-lol
+
+Task list:
+1. Create a MoveIt configuration package of your OMTP environment
+2. Test moveit_config package with MoveIt Commander command line tool
+3. Create a custom OMTP Gazebo launch file and .world
+4. Create a pick and place pipeline in Python
+
+## Lecture 3
+## Lecture 4
+## Lecture 5
+## Lecture 7
+## Lecture 8
 trjyrskuyruyr
