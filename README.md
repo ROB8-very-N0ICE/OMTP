@@ -41,3 +41,7 @@ roslaunch omtp_support visualize_omtp_factory.launch
 ```
 
 Afterwards the complete factory should be displayed in RVIZ.
+
+
+## Lecture 2
+
