@@ -3,7 +3,23 @@
 This repository is part of the Object Manipulation and Task Planning course, from the 8th semester, Msc. in Robotics 2022.
 The repository contains the solutions to the assignments given in the course. Each lecture has their own section in the README and each exercise has a tag like lec<number>_submission. In each lecture section the solution to the assignment in the specific lecture is detailed further. Installation of necessary packages, usage of the code and error handling is elaborated on in the lecture sections.
 
-## Lecture 1
+## Lecture 1- Building a Robot Simulation Environment in ROS
+####Before getting started, the following tutorials about URDF en Xacro files can be used to learn the basics:
+
+* [Building a Visual Robot Model with URDF from Scratch](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch) 
+* [Building a Movable Robot Model with URDF](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Movable%20Robot%20Model%20with%20URDF)
+* [Using Xacro to Clean Up a URDF File](http://wiki.ros.org/urdf/Tutorials/Using%20Xacro%20to%20Clean%20Up%20a%20URDF%20File)
+###To get started:
+1) Create a catkin workspace.(http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
+2) Clone the repository in your workspace: `git clone https://github.com/ROB8-very-N0ICE/OMTP.git` in `$ cd ~/catkin_ws/src`
+3) `$ catkin_make` in `$ cd ~/catkin_ws`
+4) `$ source devel/setup.bash`
+
+###Inspecting the factory
+1) We transform the xacro factory file into a urdf file: `$ xacro omtp_factory.xacro > omtp.urdf`
+2) Check the syntax of the urdf file: `$ check_urdf omtp.urdf`
+3) Check the link graph by generating a pdf using: `$ urdf_to_graphiz`
+
 
 This Lecture took place 03/02-22 and was the lecture 1/12. The assignment entailed:
 
