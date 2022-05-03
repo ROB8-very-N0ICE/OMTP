@@ -56,4 +56,3 @@ Task list:
 ## Lecture 5
 ## Lecture 7
 ## Lecture 8
-trjyrskuyruyr
