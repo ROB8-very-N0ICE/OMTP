@@ -108,5 +108,10 @@
       <origin xyz="1.0 0.0 0.0" rpy="0 0 0"/>
   </xacro:eu_pallet_urdf>
   
+  <!-- example nurse model -->
+  <xacro:include filename="$(find aau_lab_ros_models)/urdf/nurse/nurse.urdf.xacro"/>
+  <xacro:nurse_urdf nurse_prefix="n1_" nurse_parent="ep1__eu_pallet">
+      <origin xyz="0.0 0.0 0.15" rpy="0 0 ${pi}"/>
+  </xacro:nurse_urdf>
 
 </robot>

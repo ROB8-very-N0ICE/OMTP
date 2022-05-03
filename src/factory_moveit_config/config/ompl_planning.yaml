@@ -209,8 +209,6 @@ panda_hand_1:
     - LazyPRMstar
     - SPARS
     - SPARStwo
-  projection_evaluator: joints(panda_1_finger_joint1,panda_1_finger_joint2)
-  longest_valid_segment_fraction: 0.005
 panda_hand_2:
   planner_configs:
     - AnytimePathShortening
@@ -237,5 +235,3 @@ panda_hand_2:
     - LazyPRMstar
     - SPARS
     - SPARStwo
-  projection_evaluator: joints(panda_2_finger_joint1,panda_2_finger_joint2)
-  longest_valid_segment_fraction: 0.005

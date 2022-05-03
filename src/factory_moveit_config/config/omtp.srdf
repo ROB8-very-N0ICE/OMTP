@@ -51,9 +51,9 @@
         <joint name="panda_1_joint1" value="0"/>
         <joint name="panda_1_joint2" value="0"/>
         <joint name="panda_1_joint3" value="0"/>
-        <joint name="panda_1_joint4" value="-0.7996"/>
+        <joint name="panda_1_joint4" value="-0.7332"/>
         <joint name="panda_1_joint5" value="0"/>
-        <joint name="panda_1_joint6" value="1.5655"/>
+        <joint name="panda_1_joint6" value="2.8985"/>
         <joint name="panda_1_joint7" value="0"/>
     </group_state>
     <group_state name="panda2_rdy" group="panda_arm_2">
@@ -62,33 +62,33 @@
         <joint name="panda_2_joint3" value="0"/>
         <joint name="panda_2_joint4" value="-1.5708"/>
         <joint name="panda_2_joint5" value="0"/>
-        <joint name="panda_2_joint6" value="1.5655"/>
+        <joint name="panda_2_joint6" value="1.5447"/>
         <joint name="panda_2_joint7" value="0"/>
     </group_state>
     <group_state name="panda2_up" group="panda_arm_2">
         <joint name="panda_2_joint1" value="0"/>
         <joint name="panda_2_joint2" value="0"/>
         <joint name="panda_2_joint3" value="0"/>
-        <joint name="panda_2_joint4" value="-1.0318"/>
-        <joint name="panda_2_joint5" value="0"/>
-        <joint name="panda_2_joint6" value="1.5655"/>
-        <joint name="panda_2_joint7" value="0"/>
+        <joint name="panda_2_joint4" value="-0.8493"/>
+        <joint name="panda_2_joint5" value="-0.08"/>
+        <joint name="panda_2_joint6" value="2.7735"/>
+        <joint name="panda_2_joint7" value="-0.2081"/>
     </group_state>
     <group_state name="tool1_open" group="panda_hand_1">
         <joint name="panda_1_finger_joint1" value="0.04"/>
         <joint name="panda_1_finger_joint2" value="0.04"/>
     </group_state>
     <group_state name="tool1_close" group="panda_hand_1">
-        <joint name="panda_1_finger_joint1" value="0"/>
-        <joint name="panda_1_finger_joint2" value="0"/>
+        <joint name="panda_1_finger_joint1" value="0.00"/>
+        <joint name="panda_1_finger_joint2" value="0.00"/>
     </group_state>
     <group_state name="tool2_open" group="panda_hand_2">
         <joint name="panda_2_finger_joint1" value="0.04"/>
         <joint name="panda_2_finger_joint2" value="0.04"/>
     </group_state>
     <group_state name="tool2_close" group="panda_hand_2">
-        <joint name="panda_2_finger_joint1" value="0"/>
-        <joint name="panda_2_finger_joint2" value="0"/>
+        <joint name="panda_2_finger_joint1" value="0.00"/>
+        <joint name="panda_2_finger_joint2" value="0.00"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="hand1" parent_link="panda_1_link8" group="panda_hand_1" parent_group="panda_arm_1"/>
@@ -96,6 +96,7 @@
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="bp1_festo_module" link2="ep1__eu_pallet" reason="Adjacent"/>
     <disable_collisions link1="bp1_festo_module" link2="fib14" reason="Adjacent"/>
+    <disable_collisions link1="bp1_festo_module" link2="n1__nurse" reason="Never"/>
     <disable_collisions link1="bp1_festo_module" link2="panda_1_hand" reason="Never"/>
     <disable_collisions link1="bp1_festo_module" link2="panda_1_leftfinger" reason="Never"/>
     <disable_collisions link1="bp1_festo_module" link2="panda_1_link0" reason="Never"/>
@@ -129,6 +130,7 @@
     <disable_collisions link1="bp1_festo_module" link2="s4_festo_module" reason="Adjacent"/>
     <disable_collisions link1="bp1_festo_module" link2="t1_festo_module" reason="Adjacent"/>
     <disable_collisions link1="ep1__eu_pallet" link2="fib14" reason="Adjacent"/>
+    <disable_collisions link1="ep1__eu_pallet" link2="n1__nurse" reason="Adjacent"/>
     <disable_collisions link1="ep1__eu_pallet" link2="panda_1_hand" reason="Never"/>
     <disable_collisions link1="ep1__eu_pallet" link2="panda_1_leftfinger" reason="Never"/>
     <disable_collisions link1="ep1__eu_pallet" link2="panda_1_link0" reason="Never"/>
@@ -161,6 +163,7 @@
     <disable_collisions link1="ep1__eu_pallet" link2="s3_festo_module" reason="Adjacent"/>
     <disable_collisions link1="ep1__eu_pallet" link2="s4_festo_module" reason="Adjacent"/>
     <disable_collisions link1="ep1__eu_pallet" link2="t1_festo_module" reason="Adjacent"/>
+    <disable_collisions link1="fib14" link2="n1__nurse" reason="Never"/>
     <disable_collisions link1="fib14" link2="panda_1_hand" reason="Never"/>
     <disable_collisions link1="fib14" link2="panda_1_leftfinger" reason="Never"/>
     <disable_collisions link1="fib14" link2="panda_1_link0" reason="Never"/>
@@ -193,6 +196,38 @@
     <disable_collisions link1="fib14" link2="s3_festo_module" reason="Adjacent"/>
     <disable_collisions link1="fib14" link2="s4_festo_module" reason="Adjacent"/>
     <disable_collisions link1="fib14" link2="t1_festo_module" reason="Adjacent"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_hand" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_leftfinger" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link0" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link1" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link2" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link3" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link4" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link5" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link6" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link7" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_link8" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_1_rightfinger" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_hand" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_leftfinger" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link0" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link1" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link2" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link3" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link4" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link5" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link6" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link7" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_link8" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="panda_2_rightfinger" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="r1_festo_module" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="robot1_pedestal_link" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="robot2_pedestal_link" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="s1_festo_module" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="s2_festo_module" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="s3_festo_module" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="s4_festo_module" reason="Never"/>
+    <disable_collisions link1="n1__nurse" link2="t1_festo_module" reason="Never"/>
     <disable_collisions link1="panda_1_hand" link2="panda_1_leftfinger" reason="Adjacent"/>
     <disable_collisions link1="panda_1_hand" link2="panda_1_link4" reason="Never"/>
     <disable_collisions link1="panda_1_hand" link2="panda_1_link5" reason="Default"/>

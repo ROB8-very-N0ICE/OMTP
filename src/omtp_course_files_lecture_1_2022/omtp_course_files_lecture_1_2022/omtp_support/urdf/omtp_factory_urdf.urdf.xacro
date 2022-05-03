@@ -468,18 +468,17 @@
             </geometry>
         </visual>
         <collision>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-          <geometry>
-            <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
-          </geometry>
+            <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+            <geometry>
+                <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
+            </geometry>
         </collision>
         <inertial>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}" />
-          <mass value="0.1" />
-          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+            <mass value="0.1" />
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
         </inertial>
     </link>
-
     <link name="panda_1_rightfinger">
         <visual>
             <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
@@ -488,18 +487,17 @@
             </geometry>
         </visual>
         <collision>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-          <geometry>
-            <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
-          </geometry>
+            <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+            <geometry>
+                <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
+            </geometry>
         </collision>
         <inertial>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}" />
-          <mass value="0.1" />
-          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+            <mass value="0.1" />
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
         </inertial>
     </link>
-
     <joint name="panda_1_finger_joint1" type="prismatic">
         <parent link="panda_1_hand" />
         <child link="panda_1_leftfinger" />
@@ -942,18 +940,17 @@
             </geometry>
         </visual>
         <collision>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-          <geometry>
-            <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
-          </geometry>
+            <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+            <geometry>
+                <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
+            </geometry>
         </collision>
         <inertial>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}" />
-          <mass value="0.1" />
-          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+            <mass value="0.1" />
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
         </inertial>
     </link>
-
     <link name="panda_2_rightfinger">
         <visual>
             <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
@@ -962,18 +959,17 @@
             </geometry>
         </visual>
         <collision>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-          <geometry>
-            <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
-          </geometry>
+            <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+            <geometry>
+                <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
+            </geometry>
         </collision>
         <inertial>
-          <origin xyz="0 0 0" rpy="0 0 ${pi}" />
-          <mass value="0.1" />
-          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+            <mass value="0.1" />
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
         </inertial>
     </link>
-
     <joint name="panda_2_finger_joint1" type="prismatic">
         <parent link="panda_2_hand" />
         <child link="panda_2_leftfinger" />
@@ -1253,6 +1249,30 @@
         <origin rpy="0 0 0" xyz="1.0 0.0 0.0" />
         <parent link="world_interface" />
         <child link="ep1__eu_pallet" />
+    </joint>
+    <!-- Links -->
+    <link name="n1__nurse">
+        <visual>
+            <geometry>
+                <mesh filename="package://aau_lab_ros_models/meshes/nurse/nurse.dae" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://aau_lab_ros_models/meshes/nurse/nurse.dae" />
+            </geometry>
+        </collision>
+        
+<inertial>
+            <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0" />
+            <mass value="25" />
+        </inertial>
+
+    </link>
+    <joint name="n1__to_world_interface" type="fixed">
+        <origin rpy="0 0 3.141592653589793" xyz="0.0 0.0 0.15" />
+        <parent link="ep1__eu_pallet" />
+        <child link="n1__nurse" />
     </joint>
     
 <transmission name="trans_panda_1_joint1">

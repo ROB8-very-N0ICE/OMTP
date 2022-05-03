@@ -2,7 +2,7 @@
 <robot name="omtp"
   xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find omtp_support)/urdf/omtp_factory2.urdf.xacro"/>
+  <xacro:include filename="$(find omtp_support)/urdf/omtp_factory_urdf.urdf.xacro"/>
 
   <!-- ==================================================== -->
   <!-- 2D camera for Gazebo                                 -->
@@ -108,11 +108,5 @@
       </plugin>
     </sensor>
   </gazebo>
-
-
-
-
-
-
-
+  
 </robot>

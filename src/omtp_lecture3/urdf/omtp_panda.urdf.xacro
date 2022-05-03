@@ -2,7 +2,7 @@
 <robot name="omtp"
   xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Insert Panda robot -->
-  <xacro:include filename="$(find omtp_support)/urdf/omtp_factory2.urdf.xacro"/>
+  <xacro:include filename="$(find omtp_support)/urdf/omtp_factory_urdf.urdf.xacro"/>
 
   <!-- ==================================================== -->
   <!-- 2D camera for Gazebo                                 -->
@@ -13,7 +13,7 @@
   <joint name="camera_joint" type="fixed">
     <axis xyz="0 1 0" />
     <origin xyz="0 0 1.2" rpy="0 0 0"/>
-    <parent link="world"/>
+    <parent link="panda_1_link0"/>
     <child link="camera_link"/>
   </joint>
 
@@ -108,11 +108,5 @@
       </plugin>
     </sensor>
   </gazebo>
-
-
-
-
-
-
 
 </robot>

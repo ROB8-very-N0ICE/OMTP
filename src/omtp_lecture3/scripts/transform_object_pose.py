@@ -63,12 +63,13 @@ def logical_camera_callback(data):
             object_pose.pose.orientation.w = gazebo_object.pose.orientation.w
             while True:
                 try:
-                    object_world_pose = tf_buffer.transform(object_pose, "logical_camera1_robot_frame")    #"logical_camera1_robot_frame")
+                    #object_world_pose = tf_buffer.transform(object_pose, "panda_1_link0")  
+                    object_robot_pose = tf_buffer.lookup_transform("logical_camera1_box_01_frame", "panda_1_link0", rospy.Time(0), rospy.Duration(1.0))
                     break
                 except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
                     continue
             print('========================================')
-            print('Pose of the object in the robot reference frame is: %s', object_world_pose)
+            print('Pose of the object in the robot reference frame is: %s', object_robot_pose)
             print('========================================')
             print('Pose of the object in the logical camera reference frame is: %s', object_pose)
             print('========================================')

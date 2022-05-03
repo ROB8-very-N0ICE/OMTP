@@ -1,4 +1,5 @@
 <launch>
+
   <!-- specify the planning pipeline -->
   <arg name="pipeline" default="ompl" />
 
@@ -11,13 +12,13 @@
 
   <!-- launch the gazebo simulator and spawn the robot -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find omtp_lecture4)/worlds/box_world.world"/>
+    <arg name="world_name" value="$(find omtp_lecture3)/worlds/box_world.world"/>
     <arg name="paused" value="true"/>
     <arg name="gui" value="$(arg gazebo_gui)"/>
   </include>
 
   <!-- send robot urdf to param server -->
-  <param name="robot_description" command="xacro  '$(find omtp_lecture3)/urdf/omtp_panda.urdf.xacro'"/>
+  <param name="robot_description" command="xacro  '$(find omtp_lecture3)/urdf/omtp_panda.urdf.xacro'" />
 
   <!-- unpause only after loading robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />
