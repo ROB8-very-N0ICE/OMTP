@@ -28,6 +28,11 @@ The project has been tested using the following versions.
 5) `$ source devel/setup.bash`
 6) Visualize factory in Rviz:`$ roslaunch omtp_support visualize_omtp_factory.launch`
 
+
+<p class="aligncenter">
+    <img src="Images/empty.png" width=80% height=80% align=center alt="empty factory">
+</p>
+
 ###Inspecting the factory
 1) We transform the xacro factory file into a urdf file: `$ xacro omtp_factory.xacro > omtp.urdf`
 2) Check the syntax of the urdf file: `$ check_urdf omtp.urdf`
@@ -57,7 +62,10 @@ Seven modules were  added and connected to one another in line 1057 to 1225, des
 
  Additionally, a wooden pellet and a nurse were added in fron of the factory at line 1236 to line 1282, containing an origin, model and inertia. A screenshot titled lecture1exercise can be found in the folder named "pictures".
 
-![Image](/images/factory.png)
+<p class="aligncenter">
+    <img src="Images/factory.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
+</p>
+
 
 ## Lecture 2
 Task list for lecture 2:
