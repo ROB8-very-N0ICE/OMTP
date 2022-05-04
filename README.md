@@ -33,7 +33,7 @@ The project has been tested using the following versions.
     <img src="Images/empty.png" width=80% height=80% align=center alt="empty factory">
 </p>
 
-###Inspecting the factory
+##Inspecting the factory
 1) We transform the xacro factory file into a urdf file: `$ xacro omtp_factory.xacro > omtp.urdf`
 2) Check the syntax of the urdf file: `$ check_urdf omtp.urdf`
 3) Check the link graph by generating a pdf using: `$ urdf_to_graphiz`
@@ -60,7 +60,13 @@ Seven modules were  added and connected to one another in line 1057 to 1225, des
 
 ###4) Adding additional objects
 
- Additionally, a wooden pellet and a nurse were added in fron of the factory at line 1236 to line 1282, containing an origin, model and inertia. A screenshot titled lecture1exercise can be found in the folder named "pictures".
+ Additionally, a wooden pellet and a nurse were added in front of the factory at line 1236 to line 1282, containing an origin, model and inertia. A screenshot titled lecture1exercise can be found in the folder named "pictures".
+
+
+##Running the factory
+* From  `~/catkin-ws` launch `$ roslaunch omtp_support visualize_omtp_factory.launch`
+* If it is not working remember to source the workspace `source devel/setup.bash`
+* After the changes have been added we end up with this:
 
 <p class="aligncenter">
     <img src="Images/factory.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
