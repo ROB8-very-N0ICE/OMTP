@@ -66,7 +66,10 @@ Task list for lecture 2:
 In lecture 2 we created a ROS package using MoveIt setup assistant. By running:
 ```
 rosrun moveit_setup_assistant moveit_setup_assistant 
-``` 
+```
+<p class="aligncenter">
+    <img src="Images/moveit.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
+</p>
 
 
 ## Lecture 3
