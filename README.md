@@ -91,6 +91,10 @@ rosrun moveit_setup_assistant moveit_setup_assistant
     <img src="Images/generate_urdf.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
 
+After building the configuration package, we ran ```roslaunch omtp_factory_moveit demo_gazebo.launch```, but
+because the URDF file was incomplete, the controllers failed to load and the robot could not move. Therefor we added 
+
+
 
 ## Lecture 3
 ## Lecture 4
