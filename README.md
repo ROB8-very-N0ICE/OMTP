@@ -7,14 +7,14 @@ The repository contains the solutions to the assignments given in the course. Ea
 The project has been tested using the following versions.
 * Ubuntu 20.04 and [ROS Noetic](https://wiki.ros.org/noetic/Installation) & [Gazebo](http://gazebosim.org/tutorials/?tut=ros_wrapper_versions) 11 
 
-## Lecture 1- Building a Robot Simulation Environment in ROS
-####Before getting started, the following tutorials about URDF en Xacro files can be used to learn the basics:
+###### Lecture 1- Building a Robot Simulation Environment in ROS
+#### Before getting started, the following tutorials about URDF en Xacro files can be used to learn the basics:
 
 * [Building a Visual Robot Model with URDF from Scratch](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch) 
 * [Building a Movable Robot Model with URDF](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Movable%20Robot%20Model%20with%20URDF)
 * [Using Xacro to Clean Up a URDF File](http://wiki.ros.org/urdf/Tutorials/Using%20Xacro%20to%20Clean%20Up%20a%20URDF%20File)
 
-###To get started:
+### To get started:
 1) Create a catkin workspace.(http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 2) Clone the repository:`git clone https://github.com/ROB8-very-N0ICE/OMTP.git` in `$ cd ~/catkin_ws/src`
 3) `$ catkin_make` in `$ cd ~/catkin_ws`
@@ -28,6 +28,7 @@ The project has been tested using the following versions.
 5) `$ source devel/setup.bash`
 6) Visualize factory in Rviz:`$ roslaunch omtp_support visualize_omtp_factory.launch`
 
+### Inspecting the factory
 
 <p class="aligncenter">
     <img src="Images/empty.png" width=80% height=80% align=center alt="empty factory">
@@ -39,7 +40,7 @@ The project has been tested using the following versions.
 3) Check the link graph by generating a pdf using: `$ urdf_to_graphiz`
 
 
-###Rebuild the OMTP factory world
+### Rebuild the OMTP factory world
 It should include:
 * Two Franka robots, one bin per robot can be found here: [file](/franka_description)
 * AAU smart lab Festo modules can be found here: [file](/aau_lab_ros_models)
@@ -80,16 +81,24 @@ Task list for lecture 2:
 3. Create a custom OMTP Gazebo launch file and .world
 4. Create a pick and place pipeline in Python
 
-In lecture 2 we created a ROS package using MoveIt setup assistant. By running:
+In lecture 2 we built a MoveIt configuration package, using the MoveIt setup assistant. By running
 ```
 rosrun moveit_setup_assistant moveit_setup_assistant 
 ```
 <p class="aligncenter">
     <img src="Images/moveit.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
+
+Here we selected the "Create New MoveIt Configuration Package" and proceeded by filling the required fields,
+until "Simulation". Then we generated the URDF script and copied it to the ```/urdf/omtp_factory.xacro``` so that the
+robot can be represented in Gazebo.
+
 <p class="aligncenter">
     <img src="Images/generate_urdf.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
+
+After building the configuration package, we ran ```roslaunch omtp_factory_moveit demo_gazebo.launch```, but
+the robot could not move, as the controllers failed to load, because the URDF file was incomplete, as the .
 
 
 ## Lecture 3
