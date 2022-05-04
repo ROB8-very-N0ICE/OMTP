@@ -60,7 +60,7 @@ Seven modules were  added and connected to one another in line 1057 to 1225, des
 
 ### 3) Adding additional objects
 
- Additionally, a wooden pellet and a nurse were added in front of the factory at line 1236 to line 1282, containing an origin, model and inertia. A screenshot titled lecture1exercise can be found in the folder named "pictures".
+ Additionally, a wooden pellet and a nurse were added in front of the factory at line 1236 to line 1282, containing an origin, model and inertia. 
 
 
 ## Running the factory
