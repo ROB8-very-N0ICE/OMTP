@@ -35,7 +35,6 @@ The project has been tested using the following versions.
 
 
 ###Rebuild the OMTP factory world
-
 It should include:
 * Two Franka robots, one bin per robot 
 * AAU smart lab Festo modules
