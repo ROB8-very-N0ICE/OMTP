@@ -36,15 +36,26 @@ The project has been tested using the following versions.
 
 ###Rebuild the OMTP factory world
 It should include:
-* Two Franka robots, one bin per robot 
-* AAU smart lab Festo modules
-* Additional models/objects( Conveyors, boxes, pallets, shelves etc.)
-#### The OMTP factory xacro file which is modified can be found here: `omtp_support/urdf/omtp_factory.xacro`
+* Two Franka robots, one bin per robot can be found here: [file](/franka_description)
+* AAU smart lab Festo modules can be found here: [file](/aau_lab_ros_models)
+* Additional models/objects( Conveyors, boxes, pallets, shelves etc.) models can be found in te following links:
+  * https://app.ignitionrobotics.org/fuel/models
+  * https://github.com/osrf/gazebo_models
+  * http://data.nvision2.eecs.yorku.ca/3DGEMS/
+### The OMTP factory xacro file which is modified is:
+  `omtp_support/urdf/omtp_factory.xacro`
 
 ###1) Adding the robots to the factory
-*
+Robot descriptions (URDF/XACRO) can be found on [ROS-industrial](http://wiki.ros.org/Industrial/supported_hardware) 
 
+The two robot arms added were the panda manipulators, which can be found from line 41 to 519 for the first panda arm, and the second panda arm being from line 520 to 992, where the eight links are described with a cylinder length, radius, and origin for the two end points. Along with the links, the joints are also described. They contain information about the individual joints rotation position and which links they are connected to, as well as their velocity limit and damping. The links and joints for the end effectors were also added for the two panda arms. Two for each arm.
 
+###3) Adding AAU Smart Lab modules
+Seven modules were  added and connected to one another in line 1057 to 1225, describing the specific model, their origin point, and which module they are connected to. The modules consists of five modules with a conveyor belt going straight forward, one in a T shape, and the last one containing a closed off workstation.
+
+###4) Adding additional objects
+
+ Additionally, a wooden pellet and a nurse were added in fron of the factory at line 1236 to line 1282, containing a origin, model and inertia. A screenshot titled lecture1exercise can be found in the folder named "pictures".
 ## Lecture 2
 Task list for lecture 2:
 1. Create a MoveIt configuration package of your OMTP environment
