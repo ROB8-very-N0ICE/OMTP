@@ -46,12 +46,17 @@ It should include:
 
 
 ## Lecture 2
-
-Task list:
+Task list for lecture 2:
 1. Create a MoveIt configuration package of your OMTP environment
 2. Test moveit_config package with MoveIt Commander command line tool
 3. Create a custom OMTP Gazebo launch file and .world
 4. Create a pick and place pipeline in Python
+
+In lecture 2 we created a ROS package using MoveIt setup assistant. By running:
+```
+rosrun moveit_setup_assistant moveit_setup_assistant 
+``` 
+
 
 ## Lecture 3
 ## Lecture 4
