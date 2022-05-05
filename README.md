@@ -173,6 +173,8 @@ In order to run the following codes, ensure that matlab is installed on the mach
 1. Design pick and place pipeline using behaviors and state machines in FlexBE
 2. Design a custom FlexBE state in Python to control the Franka Hand
 
+#### 1) Pick and palce pipline in FLexBE
+
 The FlexBE app and behavior engine was installed trough their github. 
 For the app https://github.com/FlexBE/flexbe_app and for the behavior engine https://github.com/team-vigir/flexbe_behavior_engine.
 Their github was cloned into the workspace and build there with catkin build.
@@ -217,8 +219,18 @@ The picture below shows the camera and grasp state information filled out.
     <img src="Images/grasp.png" width=40% height=40% align=center alt="aaa">
 </p>
 
-Aditionally States can be connected to different outcomes such as another state af completion, finshed after completion and failur otherwise.
+Aditionally States can be connected to different outcomes such as another state after completion, finshed node after completion and failur node otherwise.
+A complete pick and place pipline is shown in the picture below.
+
+<p class="aligncenter">
+    <img src="Images/pick_place_pipline.png" width=80% height=80% align=center alt="aaa">
+</p>
+
 In the Runtime control the behavior can be excuted when the simulation in gazebo is running and in the configuration tab packages can be forced to be found if it does not get detected by FlexBE.
+
+#### 2) Franka hand
+
+A custom FlexBE state for the Franka hand is found in `src/lecture4_files/omtp_factory_behaviors/omtp_factory_flexbe_states`. The moveit to joint state have been modified to fit the Franka hand by adding the joints of the Franka hand and joint config to it. Mimic have been removed due to unexpected behavior thus both finger joints needs to be included.
 
 ## Lecture 5: Advanced Topic 1 - CNNs in Practical Robotic Applications
 
