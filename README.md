@@ -224,7 +224,14 @@ graphical representation of the TF or TF2 tree respectively.
 
 ### Incorporate logical camera object detection in pick-and-place pipeline
 We did not complete this part.
-
+  
+<p class="aligncenter">
+    <img src="Images/lecture3_robot_setup.png" width=60% height=60% align=center alt="FlexBE interface">
+</p>
+  
+  <p class="aligncenter">
+    <img src="Images/lecture3_factory_setup.png" width=60% height=80% align=center alt="FlexBE interface">
+</p>
 ## Lecture 4: Behavior Design with State Machines
 Task list for lecture 4:
 1. Design pick and place pipeline using behaviors and state machines in FlexBE
