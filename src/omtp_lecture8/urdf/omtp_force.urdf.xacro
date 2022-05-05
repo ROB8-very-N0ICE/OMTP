@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<robot name="omtp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ==================================================== -->
+  <!-- INITIAL SETUP OF WORLD LINK                          -->
+  <!-- ==================================================== -->
+  <!-- world -->
+  <link name="world" />
+
+  <!-- ==================================================== -->
+  <!-- Panda robot setup                                    -->
+  <!-- ==================================================== -->
+  <!-- Panda parameters -->
+  <xacro:arg name="arm_id" default="panda"/>
+  <xacro:arg name="use_cylinder_collision_model" default="true"/>
+  <xacro:arg name="use_gazebo_sim" default="true"/>
+  <xacro:arg name="parent" default="world"/>
+
+  <!-- Insert Panda robot -->
+  <xacro:include filename="$(find franka_description)/robots/panda_arm_hand.urdf.xacro"/>
+
+  <!-- ==================================================== -->
+  <!-- Force-torque setup for finger joint 1                -->
+  <!-- Can also be placed in the franka_description xacro   -->
+  <!-- Outputs wrench on topic:                             -->
+  <!--     /panda_finger1/ft_sensor_topic                   -->
+  <!--     Type: geometry_msgs/WrenchStamped                -->
+  <!-- ==================================================== -->
+  <gazebo reference="panda_finger_joint1">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <!-- The ft_sensor plugin  -->
+  <gazebo>
+    <plugin name="panda_hand_ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+      <updateRate>1000.0</updateRate>
+      <topicName>panda_finger1/ft_sensor_topic</topicName>  <!-- topic to output wrench data -->
+      <jointName>panda_finger_joint1</jointName>            <!-- joint name to measure -->
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.003</stddev>      <!-- change this to simulate noise -->
+      </noise>
+    </plugin>
+  </gazebo>
+
+</robot>
