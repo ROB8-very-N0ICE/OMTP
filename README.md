@@ -8,7 +8,13 @@ The project has been tested using the following versions.
 * Ubuntu 20.04 and [ROS Noetic](https://wiki.ros.org/noetic/Installation) & [Gazebo](http://gazebosim.org/tutorials/?tut=ros_wrapper_versions) 11 
 
 ## Lecture 1- Building a Robot Simulation Environment in ROS
-Before getting started, the following tutorials about URDF en Xacro files can be used to learn the basics:
+Task list for Lecture 1:
+1) Follow two URDF tutorials
+2) Follow one XACRO tutorial
+3) Inspect the OMTP factory world (AAU Smart Lab)
+4) Rebuild the OMTP factory world
+
+The following tutorials about URDF en Xacro files can be used to learn the basics:
 
 * [Building a Visual Robot Model with URDF from Scratch](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch) 
 * [Building a Movable Robot Model with URDF](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Movable%20Robot%20Model%20with%20URDF)
@@ -39,7 +45,7 @@ Before getting started, the following tutorials about URDF en Xacro files can be
 3) Check the link graph by generating a pdf using: `$ urdf_to_graphiz`
 
 
-## Rebuild the OMTP factory world
+### Rebuild the OMTP factory world
 It should include:
 * Two Franka robots, one bin per robot can be found here: [file](/franka_description)
 * AAU smart lab Festo modules can be found here: [file](/aau_lab_ros_models)
@@ -54,20 +60,20 @@ Rebuilding the OMTP factory is accomplished by editing the XACRO file of the fac
 #### The OMTP factory xacro file which is modified is:
   ```` .../omtp course files lecture 1 2022/omtp_support/urdf/omtp_factory.xacro. ````
 
-### 1) Adding the robots to the factory
-Robot descriptions (URDF/XACRO) can be found on [ROS-industrial](http://wiki.ros.org/Industrial/supported_hardware) 
+#### 1) Adding the robots to the factory
+- Robot descriptions (URDF/XACRO) can be found on [ROS-industrial](http://wiki.ros.org/Industrial/supported_hardware) 
 
 The two robot arms added were the panda manipulators, which can be found from line 41 to 519 for the first panda arm, and the second panda arm being from line 520 to 992, where the eight links are described with a cylinder length, radius, and origin for the two end points. Along with the links, the joints are also described. They contain information about the individual joints rotation position and which links they are connected to, as well as their velocity limit and damping. The links and joints for the end effectors were also added for the two panda arms. Two for each arm.
 
-### 2) Adding AAU Smart Lab modules
+#### 2) Adding AAU Smart Lab modules
 Seven modules were  added and connected to one another in line 1057 to 1225, describing the specific model, their origin point, and which module they are connected to. The modules consists of five modules with a conveyor belt going straight forward, one in a T shape, and the last one containing a closed off workstation.
 
-### 3) Adding additional objects
+#### 3) Adding additional objects
 
  Additionally, a wooden pellet and a nurse were added in front of the factory at line 1236 to line 1282, containing an origin, model and inertia. 
 
 
-## Running the factory
+### Running the factory
 * From  `~/catkin-ws` launch `$ roslaunch omtp_support visualize_omtp_factory.launch`
 * If it is not working remember to source the workspace `source devel/setup.bash`
 * After the changes have been added we end up with this:
