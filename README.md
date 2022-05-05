@@ -100,4 +100,50 @@ because the URDF file was incomplete, the controllers failed to load and the rob
 ## Lecture 4
 ## Lecture 5
 ## Lecture 7
+In order to run the follownig codes, ensure that matlab is installed on the machine, with the "ROS Toolbox" and "Robotics System Toolbox" added as well.
+
+1) The aim of the first exercise is to implement and test DMPs. Therefore:
+
+* Download the omtp_LbD_lecture.zip folder and extract the folder
+* In the folder under DMP_lib/Test_CDMP.m open the file.
+* The file acts as a blueprint in which some of the equation and definitions are missing.
+* Add the equations and definitions and replicate the recorded trajectory with the DMP in
+position (DMP), Orientation (QDMP) and Joint (JDMP) space.
+
+The zip folder was downloaded and the matlab file "Test_CDMP.m" was opened and edited. Following changes were made to the code.
+
+At line 15: A function was made in order to calculate the joint trajectories. Requiring the DMP parameters from the xx file as input, and it would give the Joint DMP parameters as output. The function was made as a seperate file, similarly to the QDMP function. The function starts out by setting the DMP parameters, and then inserting them into the DMP_rlearn function, using the path and the current DMP parameters as input.
+
+The DMP_rlearn.m file were edited to include following variables and formulas. The initial and goal state of the DMP was added. Then a formular to derive the trajectory was made in order to obtain the velocity, and was divided with the sampling rate to get xx. Those results were then dirived again to obtain the acceleration, which was also divided with the sampling rate. The next addition was a function to calculate the weighted sum of the locally weighted regression models, in order to xx. Next was a temporal scaling derivative which was divided with the torgue, in order to xx. Lastly for the function file, a second order DMP equation was added in order to fit the target to the DMP line. It was done by xx. 
+
+Back to the Test_CDMP.m file, an intergration was done, similarly to the position part of the DMP, in order to get the joint positions.
+
+Lastly, the DMP was plotted into three different figures, one displaying position, another velocity, and the last displaying acceleration over the trajectory obtained from the test_trj.mat file.
+
+After the formulas and variables were added, the following figures were displayed when running the code in Matlab:
+
+<p class="aligncenter">
+    <img src="Images/Lecture7Exercise1.png" width=100% height=100% align=center alt="Matlab DMP trajectory">
+</p>
+
+* Try to change the time and goal constants and comment the results.
+
+2) The aim of the second exercise is to encode the demonstrated motion (test_trj.mat)
+with DMPs and execute them in simulation.
+
+* Start with MoveDMP_Gazebo.m file and add your code,
+
+In the matlab file, the LearnJDMP and DMP_integrate function were added.
+
+* from the command line launch the following roslaunch panda_moveit_config omtp_dmp.launch,
+
+The command line were run in the terminal, and would create a gazebo world, containing one panda arm
+
+* connect MATLAB to ROS (use rosinit to establish the connection),
+
+rosinit was run in order to establish the connection between MATLAB and ROS
+
+* run the simulation and Matlab code
+
+
 ## Lecture 8
