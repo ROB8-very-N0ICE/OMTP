@@ -127,7 +127,9 @@ the missing collision and inertial fields to the finger joints.
 
 Later the robots were in an impossible position so the planner could not find an initial position to start planning the
 movement, so we had to add some arm joints that were in collision. This was done by including the colliding joints to 
-```src/factory_moveit_config/config/omtp.srdf```.
+```src/factory_moveit_config/config/omtp.srdf```.\
+
+To visualize the factory, one can run the command ```roslaunch  ```
 
 ### Test moveit_config package with MoveIt Commander command line tool
 During the setup assistant, we defined 4 move groups with their respective poses as defined in the list below. 
@@ -161,9 +163,13 @@ hand1> go hand1_open
 hand1> go hand1_close
 ```
 
-
+This can also be applied by using RVIZ.
 
 ### Create a custom OMTP Gazebo launch file and .world
+To create the launch file we took inspiration from the `demo_gazebo.launch` and used the command
+`$(find <PACKAGE>)/` to find files in the other packages. We also change the **box_world.world** to spawn a box object
+togethers with our factory.
+
 ### Create a pick and place pipeline in Python
 
 ## Lecture 3: Object Detection and Grasping

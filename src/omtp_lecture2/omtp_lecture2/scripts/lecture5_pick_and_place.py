@@ -36,7 +36,7 @@ def arm_ready(group_name):
     #pose_goal.orientation.z = 0.5
     #pose_goal.orientation.w = 1.0
     pose_goal.position.x = -0.48
-    pose_goal.position.y =  3.2
+    pose_goal.position.y = 3.2
     pose_goal.position.z = 1.30
     move_group.set_pose_target(pose_goal)
     move_group.stop()
