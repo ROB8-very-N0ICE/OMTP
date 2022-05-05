@@ -1,0 +1,5 @@
+lecture4_files/omtp_lecture4
+/home/swarmmaster/OMTP/OMTP/devel/.private/omtp_lecture4/cmake.lock /home/swarmmaster/OMTP/OMTP/devel/./cmake.lock
+/home/swarmmaster/OMTP/OMTP/devel/.private/omtp_lecture4/lib/pkgconfig/omtp_lecture4.pc /home/swarmmaster/OMTP/OMTP/devel/lib/pkgconfig/omtp_lecture4.pc
+/home/swarmmaster/OMTP/OMTP/devel/.private/omtp_lecture4/share/omtp_lecture4/cmake/omtp_lecture4Config-version.cmake /home/swarmmaster/OMTP/OMTP/devel/share/omtp_lecture4/cmake/omtp_lecture4Config-version.cmake
+/home/swarmmaster/OMTP/OMTP/devel/.private/omtp_lecture4/share/omtp_lecture4/cmake/omtp_lecture4Config.cmake /home/swarmmaster/OMTP/OMTP/devel/share/omtp_lecture4/cmake/omtp_lecture4Config.cmake

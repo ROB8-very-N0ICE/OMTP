@@ -1,36 +1,29 @@
-%================================rosshutdown==========================================
-function [Data] = Jmove_Ros(q,t,robot)
+%==========================================================================
+function JmoveTrj(qi,robot)
 %==========================================================================
 % join move from teh current joints to the (q) pose in (t) secconds
-tn=0.0;
-disp('jmove..')
 
-%read robot data
-data = get_Panda_data(robot);
-q0 = data.Arm.Actual.Positions';
-% from last position
-if norm(q-q0) < 0.05
-    disp('already there')
-    return
-end
+disp('jmove trj..')
+qi=qi;
 
-time =  robot.dt:robot.dt:t;
-qi = jtraj(q0,q,time);
-qdi = diff(qi)/robot.dt;
-qdi = [qdi;qdi(end,:)];
+%prepare trajectory
+qdi = diff(qi)/dt;
+[B,A] = butter(2,0.3);
+qdif = filtfilt(B,A,qdi);
+% be sure to end with 0 velocity
+qdif = [qdif; zeros(1,7)];
+
 
 Arm_send = rosmessage("trajectory_msgs/JointTrajectoryPoint");
 Arm_send.TimeFromStart.Nsec = 10000000;
-
-%execute
+tn=0;
 st = tic;
+
 for i = 1:size(qi,1)
-   
     Arm_send.Positions = qi(i,:);
-    Arm_send.Velocities = qdi(i,:);
+    Arm_send.Velocities = qdif(i,:);
     robot.ArmM.Points= Arm_send;
     send(robot.ArmP,robot.ArmM);
-    
     tn = tn+robot.dt;
     if tn>toc(st)
         pause(tn-toc(st))

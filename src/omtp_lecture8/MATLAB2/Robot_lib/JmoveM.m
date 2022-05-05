@@ -1,5 +1,5 @@
-%================================rosshutdown==========================================
-function [Data] = Jmove_Ros(q,t,robot)
+%==========================================================================
+function [Data] = JmoveM(q,t,robot)
 %==========================================================================
 % join move from teh current joints to the (q) pose in (t) secconds
 tn=0.0;
@@ -19,13 +19,14 @@ qi = jtraj(q0,q,time);
 qdi = diff(qi)/robot.dt;
 qdi = [qdi;qdi(end,:)];
 
-Arm_send = rosmessage("trajectory_msgs/JointTrajectoryPoint");
-Arm_send.TimeFromStart.Nsec = 10000000;
 
 %execute
 st = tic;
 for i = 1:size(qi,1)
-   
+    
+    Arm_send = rosmessage("trajectory_msgs/JointTrajectoryPoint");
+    Arm_send.TimeFromStart.Nsec = 100;
+    
     Arm_send.Positions = qi(i,:);
     Arm_send.Velocities = qdi(i,:);
     robot.ArmM.Points= Arm_send;
