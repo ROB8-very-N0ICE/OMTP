@@ -259,5 +259,5 @@ Orientations are constant, desired force (vector [1x3]), time (constant in [s]),
 with CCmoveForM.mat function.
 • Add the necessary conditions in the function, so that the simulated forces will be monitored during the
 execution of the movement and stop the movement when the Fm = Fd.
-Trying to fix this now
+Trying to not suck
 ----
