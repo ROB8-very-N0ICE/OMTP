@@ -47,8 +47,12 @@ It should include:
   * https://app.ignitionrobotics.org/fuel/models
   * https://github.com/osrf/gazebo_models
   * http://data.nvision2.eecs.yorku.ca/3DGEMS/
+
+
+ 
+Rebuilding the OMTP factory is accomplished by editing the XACRO file of the factory. The second robot arm is added similar to first one, the bins and ballet are added as modules in the XACRO file. 
 #### The OMTP factory xacro file which is modified is:
-  `omtp_support/urdf/omtp_factory.xacro`
+  ```` .../omtp course files lecture 1 2022/omtp_support/urdf/omtp_factory.xacro. ````
 
 ### 1) Adding the robots to the factory
 Robot descriptions (URDF/XACRO) can be found on [ROS-industrial](http://wiki.ros.org/Industrial/supported_hardware) 
