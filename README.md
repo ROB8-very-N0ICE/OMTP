@@ -197,8 +197,33 @@ Finally, we included the node in our launch file, and all of this can be run wit
 
 ## Lecture 3: Object Detection and Grasping
 
+Task list for lecture 3:
 
+1. Add one or more cameras to your .world file
+2. Use tf or tf2_tools view_frames to print an updated tf tree of you OMTP environment with a logical camera
+3. Incorporate logical camera object detection in pick-and-place pipeline
 
+### Add one or more cameras to your .world file
+
+In order to add a camera to our `box_world.world` file, we included the following
+```
+<include>
+    <static>1</static>
+    <uri>model://logical_camera</uri>
+    <pose> -0.68  3.0  2.1 0 1.5708 0</pose>
+</include>
+```
+Where the uri refers to `model://logical_camera` which is the camera plugin and the pose is described by **x y z**
+position parameters, fallowed by **Pitch Roll Yaw** orientation parameters.
+
+### Use tf or tf2_tools view_frames to print an updated tf tree of you OMTP environment with a logical camera
+
+To see the TF tree one just have to run first run the launcher file `roslaunch omtp_lecture3 omtp_lecture3.launch`, then
+run `rosrun tf view_frames` or `rosrun tf2_tools view_frames.py` in an other terminal, to generate a PDF file with a
+graphical representation of the TF or TF2 tree respectively.
+
+### Incorporate logical camera object detection in pick-and-place pipeline
+We did not complete this part.
 
 ## Lecture 4: Behavior Design with State Machines
 Task list for lecture 4:
