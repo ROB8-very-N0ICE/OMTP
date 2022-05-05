@@ -168,11 +168,7 @@ hand1> go hand1_close
 
 ## Lecture 3: Object Detection and Grasping
 ## Lecture 4: Behavior Design with State Machines
-## Lecture 5: Advanced Topic 1 - CNNs in Practical Robotic Applications
-## Lecture 7: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 1
 In order to run the following codes, ensure that matlab is installed on the machine, with the "ROS Toolbox" and "Robotics System Toolbox" added as well.
-## Lecture 3
-## Lecture 4
   Task list for lecture 4:
 1. Design pick and place pipeline using behaviors and state machines in FlexBE
 2. Design a custom FlexBE state in Python to control the Franka Hand
@@ -223,14 +219,17 @@ The picture below shows the camera and grasp state information filled out.
 
 Aditionally States can be connected to different outcomes such as another state af completion, finshed after completion and failur otherwise.
 In the Runtime control the behavior can be excuted when the simulation in gazebo is running and in the configuration tab packages can be forced to be found if it does not get detected by FlexBE.
-## Lecture 5
+
+## Lecture 5: Advanced Topic 1 - CNNs in Practical Robotic Applications
+
   Task list for lecture 5:
 1. Intragrate Google Colab on own computer
 2. Intragare YOLOv3 in the OMTP factory
 
 The first step in intregrating Colab face detector on own computer is to download the zip given in the lecture. 
 Next step is to upload the contents of the zip file into a folder in Google drive. The folder must be named covid19. Afterwards Google Colab app needs to be installed wich allows us to open the ipnb file Google Colab. After that everyting in the ipnb file can be executed and the face detector will detect.
-## Lecture 7
+## Lecture 7: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 1
+
 In order to run the follownig codes, ensure that matlab is installed on the machine, with the "ROS Toolbox" and "Robotics System Toolbox" added as well.
 
 1) The aim of the first exercise is to implement and test DMPs. Therefore:
