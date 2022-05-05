@@ -198,23 +198,23 @@ In private configuration joints and configuration of the robot arm is defined.
 In state machine userdata information to be passed between states is defined.  
 
 <p class="aligncenter">
-    <img src="Images/overview.png" width=80% height=80% align=center alt="aaa">
+    <img src="Images/overview.png" width=40% height=40% align=center alt="aaa">
 </p>
 <p class="aligncenter">
-    <img src="Images/private_config.png" width=80% height=80% align=center alt="aaaa">
+    <img src="Images/private_config.png" width=40% height=40% align=center alt="aaaa">
 </p>
 <p class="aligncenter">
-    <img src="Images/state_mach.png" width=80% height=80% align=center alt="aaaa">
+    <img src="Images/state_mach.png" width=40% height=40% align=center alt="aaaa">
 </p>
 
 In the statemachine editor new states can be made and each state have their information that needs to be filled out.
 The picture below shows the camera and grasp state information filled out. 
 
 <p class="aligncenter">
-    <img src="Images/cam_detect.png" width=80% height=80% align=center alt="aaa">
+    <img src="Images/cam_detect.png" width=40% height=40% align=center alt="aaa">
 </p>
 <p class="aligncenter">
-    <img src="Images/grasp.png" width=80% height=80% align=center alt="aaa">
+    <img src="Images/grasp.png" width=40% height=40% align=center alt="aaa">
 </p>
 
 Aditionally States can be connected to different outcomes such as another state af completion, finshed after completion and failur otherwise.
