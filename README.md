@@ -398,12 +398,9 @@ rosinit was run in order to establish the connection between MATLAB and ROS
 
 ## Lecture 8: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 2
 Exercise 1:
-In exercise 1, you are asked to couple the dynamic simulation with DMPs to execute
-a simple Pick and Place action with the simulated robot. To start:
-• Open the file Test_move_grasp.m and run the simulation and script. The robot should start to execute
-the pick and place task.
-• Modify the script in such a way that that you replace the point to point interpolation functions (Jmove
-and Cmove) with a function for linear DMPs and plan the paths between the given points.
+Setup for exercise 1 is similar to other OMTP projects. First you need to open gazebo for simulation to function.
+First you need to build your environment with >catkin b then you source your files with source devel\setup.bash and finaly
+you run roslaunch omtp_lecture8 omtp_force.launch
 Exercise 2:
 In exercise 2, you are asked to make a Matlab function for detecting contacts based
 on simulated forces.
