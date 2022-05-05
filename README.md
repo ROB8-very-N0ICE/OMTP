@@ -18,7 +18,7 @@ Before getting started, the following tutorials about URDF en Xacro files can be
 1) Create a catkin workspace.(http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 2) Clone the repository:`git clone https://github.com/ROB8-very-N0ICE/OMTP.git` in `$ cd ~/catkin_ws/src`
 3) `$ catkin_make` in `$ cd ~/catkin_ws`
-4)  The following packages will be needed: 
+4)  The following packages will need to be installed: 
   - http://wiki.ros.org/ros_controllers
   - http://wiki.ros.org/gazebo_ros_pkgs
   - http://wiki.ros.org/gazebo_plugins 
@@ -47,8 +47,12 @@ It should include:
   * https://app.ignitionrobotics.org/fuel/models
   * https://github.com/osrf/gazebo_models
   * http://data.nvision2.eecs.yorku.ca/3DGEMS/
+
+
+ 
+Rebuilding the OMTP factory is accomplished by editing the XACRO file of the factory. The second robot arm is added similar to first one, the bins and ballet are added as modules in the XACRO file. 
 #### The OMTP factory xacro file which is modified is:
-  `omtp_support/urdf/omtp_factory.xacro`
+  ```` .../omtp course files lecture 1 2022/omtp_support/urdf/omtp_factory.xacro. ````
 
 ### 1) Adding the robots to the factory
 Robot descriptions (URDF/XACRO) can be found on [ROS-industrial](http://wiki.ros.org/Industrial/supported_hardware) 
@@ -87,6 +91,11 @@ rosrun moveit_setup_assistant moveit_setup_assistant
 <p class="aligncenter">
     <img src="Images/moveit.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
+
+Here we selected the "Create New MoveIt Configuration Package" and proceeded by filling the required fields,
+until "Simulation". Then we generated the URDF script and copied it to the ```/urdf/omtp_factory.xacro``` so that the
+robot can be represented in Gazebo.
+
 <p class="aligncenter">
     <img src="Images/generate_urdf.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
