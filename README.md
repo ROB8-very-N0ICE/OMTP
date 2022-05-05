@@ -404,7 +404,8 @@ you run >roslaunch omtp_lecture8 omtp_force.launch .This will show gazebo model 
 of it. When you open matlab with test_move_grasp.m and run it, simulated model will start moving in accordance with movemnt
 files in matlab. Unfortunately second exercise does not run on Melodic release of ROS, because of 
 error message >Failed to load plugin libgazebo_ros_ft_sensor.so. To run own DMP controlled simulation run MoveDMP_gazebo.m.
-you will have to restart gazebo before using matlab again, unfortunately.
+you will have to restart gazebo before using matlab again, unfortunately. footnote:
+ Gazebo runs without errors on Noetic ROS systems, did not test further.
 
 Exercise 2:
 CCmoveForM.mat function is not found in files so second exercise could not be finished. 
