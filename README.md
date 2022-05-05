@@ -407,6 +407,8 @@ error message >Failed to load plugin libgazebo_ros_ft_sensor.so. To run own DMP 
 you will have to restart gazebo before using matlab again, unfortunately. footnote:
 Gazebo runs without errors on Noetic ROS systems, did not test further.
 
+![](../../Pictures/Screenshot from 2022-05-05 15-55-27.png)
+
 Exercise 2:
 CCmoveForM.mat function is not found in files so second exercise could not be finished. 
 There is one in older OMTP course, but does not seem to function correctly.
