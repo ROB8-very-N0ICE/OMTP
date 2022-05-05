@@ -136,7 +136,63 @@ movement, so we had to add some arm joints that were in collision. This was done
 
 ## Lecture 3
 ## Lecture 4
+  Task list for lecture 4:
+1. Design pick and place pipeline using behaviors and state machines in FlexBE
+2. Design a custom FlexBE state in Python to control the Franka Hand
+
+The FlexBE app and behavior engine was installed trough their github. 
+For the app https://github.com/FlexBE/flexbe_app and for the behavior engine https://github.com/team-vigir/flexbe_behavior_engine.
+Their github was cloned into the workspace and build there with catkin build.
+The commands used was:
+    `$ cd ~/omtp_course_ws/src`
+    `$ git clone https://github.com/FlexBE/flexbe_app`
+    `$ git clone https://github.com/team-vigir/flexbe_behavior_engine`
+    `$ cd ..`
+    `$ catkin build`
+
+FlexBE app and behavoir engine was launched with following command:
+    `$ cd ~/omtp_course_ws`
+    `$ source devel/setup.bash`
+    `$ roslaunch flexbe_app flexbe_full.launch`
+
+<p class="aligncenter">
+    <img src="Images/interface.png" width=80% height=80% align=center alt="FlexBE interface">
+</p>
+
+The above picture shows the FlexBE app interface. 
+In overview the definition information of the behavior package is defined.
+In private configuration joints and configuration of the robot arm is defined.
+In state machine userdata information to be passed between states is defined.  
+
+<p class="aligncenter">
+    <img src="Images/overview.png" width=80% height=80% align=center alt="aaa">
+</p>
+<p class="aligncenter">
+    <img src="Images/private_config.png" width=80% height=80% align=center alt="aaaa">
+</p>
+<p class="aligncenter">
+    <img src="Images/state_mach.png" width=80% height=80% align=center alt="aaaa">
+</p>
+
+In the statemachine editor new states can be made and each state have their information that needs to be filled out.
+The picture below shows the camera and grasp state information filled out. 
+
+<p class="aligncenter">
+    <img src="Images/cam_detect.png" width=80% height=80% align=center alt="aaa">
+</p>
+<p class="aligncenter">
+    <img src="Images/grasp.png" width=80% height=80% align=center alt="aaa">
+</p>
+
+Aditionally States can be connected to different outcomes such as another state af completion, finshed after completion and failur otherwise.
+In the Runtime control the behavior can be excuted when the simulation in gazebo is running and in the configuration tab packages can be forced to be found if it does not get detected by FlexBE.
 ## Lecture 5
+  Task list for lecture 5:
+1. Intragrate Google Colab on own computer
+2. Intragare YOLOv3 in the OMTP factory
+
+The first step in intregrating Colab face detector on own computer is to download the zip given in the lecture. 
+Next step is to upload the contents of the zip file into a folder in Google drive. The folder must be named covid19. Afterwards Google Colab app needs to be installed wich allows us to open the ipnb file Google Colab. After that everyting in the ipnb file can be executed and the face detector will detect.
 ## Lecture 7
 In order to run the follownig codes, ensure that matlab is installed on the machine, with the "ROS Toolbox" and "Robotics System Toolbox" added as well.
 
