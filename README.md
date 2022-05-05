@@ -205,3 +205,4 @@ with CCmoveForM.mat function.
 execution of the movement and stop the movement when the Fm = Fd.
 • Retract the robot.
 change
+new
