@@ -90,6 +90,7 @@ Task list for lecture 2:
 3. Create a custom OMTP Gazebo launch file and .world
 4. Create a pick and place pipeline in Python
 
+### Create a MoveIt configuration package of your OMTP environment
 In lecture 2 we created a ROS package using MoveIt setup assistant. By running:
 ```
 rosrun moveit_setup_assistant moveit_setup_assistant 
@@ -108,8 +109,30 @@ robot can be represented in Gazebo.
 
 After building the configuration package, we ran ```roslaunch omtp_factory_moveit demo_gazebo.launch```, but
 because the URDF file was incomplete, the controllers failed to load and the robot could not move. Therefor we added 
+the missing collision and inertial fields to the finger joints.  
+
+```
+    <collision>
+      <origin xyz="0 0 0.475"/>
+      <geometry>
+        <box size="0.3 0.3 0.95"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value=".1"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+```
+
+Later the robots were in an impossible position so the planner could not find an initial position to start planning the
+movement, so we had to add some arm joints that were in collision. This was done by including the colliding joints to 
+```src/factory_moveit_config/config/omtp.srdf```.
 
 
+### Test moveit_config package with MoveIt Commander command line tool
+### Create a custom OMTP Gazebo launch file and .world
+### Create a pick and place pipeline in Python
 
 ## Lecture 3
 ## Lecture 4
