@@ -87,6 +87,11 @@ rosrun moveit_setup_assistant moveit_setup_assistant
 <p class="aligncenter">
     <img src="Images/moveit.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
+
+Here we selected the "Create New MoveIt Configuration Package" and proceeded by filling the required fields,
+until "Simulation". Then we generated the URDF script and copied it to the ```/urdf/omtp_factory.xacro``` so that the
+robot can be represented in Gazebo.
+
 <p class="aligncenter">
     <img src="Images/generate_urdf.png" width=80% height=80% align=center alt="MoveIt Setup Assistant">
 </p>
