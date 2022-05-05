@@ -18,7 +18,7 @@ Before getting started, the following tutorials about URDF en Xacro files can be
 1) Create a catkin workspace.(http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 2) Clone the repository:`git clone https://github.com/ROB8-very-N0ICE/OMTP.git` in `$ cd ~/catkin_ws/src`
 3) `$ catkin_make` in `$ cd ~/catkin_ws`
-4)  The following packages will be needed: 
+4)  The following packages will need to be installed: 
   - http://wiki.ros.org/ros_controllers
   - http://wiki.ros.org/gazebo_ros_pkgs
   - http://wiki.ros.org/gazebo_plugins 
