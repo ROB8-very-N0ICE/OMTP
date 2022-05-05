@@ -171,8 +171,35 @@ To create the launch file we took inspiration from the `demo_gazebo.launch` and 
 togethers with our factory.
 
 ### Create a pick and place pipeline in Python
+The Python script was made in `lecture5_pick_and_place.py` as a normal ROS node. Here the libraries **moveit_commander**
+and **moveit_msgs.msg** were used to send commands to the robot. in this fashion
+
+``` 
+move_group = moveit_commander.MoveGroupCommander(group_name)
+planning_frame = move_group.get_planning_frame()
+pose_goal = geometry_msgs.msg.Pose()
+pose_goal.orientation.x = 1.0
+pose_goal.position.x = -0.48
+pose_goal.position.y =  3.0
+pose_goal.position.z = 1.30
+move_group.set_pose_target(pose_goal)
+move_group.stop()
+plan = move_group.go(wait=True)
+move_group.clear_pose_targets()
+```
+Here the position is an euclidian distance from the center of the world, while the orientation is given quaternions. By
+setting `pose_goal.orientation.x = 1.0`, we are forcing the robot to point down.
+
+The pick and place was not completed due to a bug in the gripper controller, but the motion of the arm, was used as a 
+proof of concept.\
+Finally, we included the node in our launch file, and all of this can be run with the command\
+`roslaunch omtp_lecture2 demo_gazebo.launch`
 
 ## Lecture 3: Object Detection and Grasping
+
+
+
+
 ## Lecture 4: Behavior Design with State Machines
 In order to run the following codes, ensure that matlab is installed on the machine, with the "ROS Toolbox" and "Robotics System Toolbox" added as well.
   Task list for lecture 4:
