@@ -133,7 +133,9 @@ The DMP_rlearn.m file were edited to include following variables and formulas. T
 
 Back to the Test_CDMP.m file, an intergration was done, similarly to the position part of the DMP, in order to get the joint positions.
 
-Lastly, the DMP was plotted into three different figures, one displaying position, another velocity, and the last displaying acceleration over the trajectory obtained from the test_trj.mat file.
+Next, the DMP was plotted into three different figures, one displaying position, another velocity, and the last displaying acceleration over the trajectory obtained from the test_trj.mat file.
+
+Lastly, in order to prevent MATLAB from crashing when running the code, Preallocation had to be done to the three variables: xN, jN and qQ.
 
 After the formulas and variables were added, the following figures were displayed when running the code in Matlab:
 
