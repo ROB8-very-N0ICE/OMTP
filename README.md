@@ -83,7 +83,7 @@ Seven modules were  added and connected to one another in line 1057 to 1225, des
 </p>
 
 
-## Lecture 2
+## Lecture 2: Manipulation with MoveIt
 Task list for lecture 2:
 1. Create a MoveIt configuration package of your OMTP environment
 2. Test moveit_config package with MoveIt Commander command line tool
@@ -129,11 +129,48 @@ Later the robots were in an impossible position so the planner could not find an
 movement, so we had to add some arm joints that were in collision. This was done by including the colliding joints to 
 ```src/factory_moveit_config/config/omtp.srdf```.
 
-
 ### Test moveit_config package with MoveIt Commander command line tool
+During the setup assistant, we defined 4 move groups with their respective poses as defined in the list below. 
+
+- arm1
+  - arm1_ready
+  - arm1_pick
+- arm2
+  - arm2_ready
+  - arm2_pick
+- hand1
+  - hand1_open
+  - hand1_close
+- hand2
+  - hand2_open
+  - hand2_close
+
+To move the robot, we typed in the command line, for example:
+
+```
+$ roslaunch omtp_moveit_config demo.launch
+$ rosrun moveit_commander moveit_commander_cmdline.py
+> use arm1
+arm1> go arm1_ready
+arm1> go arm1_pick
+> use arm2
+arm2> go arm2_ready
+arm2> go arm2_pick
+> use hand1
+hand1> go hand1_open
+hand1> go hand1_close
+```
+
+
+
 ### Create a custom OMTP Gazebo launch file and .world
 ### Create a pick and place pipeline in Python
 
+## Lecture 3: Object Detection and Grasping
+## Lecture 4: Behavior Design with State Machines
+## Lecture 5: Advanced Topic 1 - CNNs in Practical Robotic Applications
+## Lecture 7: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 1
+In order to run the following codes, ensure that matlab is installed on the machine, with the "ROS Toolbox" and "Robotics System Toolbox" added as well.
 ## Lecture 3
 ## Lecture 4
   Task list for lecture 4:
@@ -242,7 +279,7 @@ rosinit was run in order to establish the connection between MATLAB and ROS
 * run the simulation and Matlab code
 
 
-## Lecture 8
+## Lecture 8: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 2
 Exercise 1:
 In exercise 1, you are asked to couple the dynamic simulation with DMPs to execute
 a simple Pick and Place action with the simulated robot. To start:
