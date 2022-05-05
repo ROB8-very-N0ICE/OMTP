@@ -399,16 +399,15 @@ rosinit was run in order to establish the connection between MATLAB and ROS
 ## Lecture 8: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 2
 Exercise 1:
 Setup for exercise 1 is similar to other OMTP projects. First you need to open gazebo for simulation to function.
-First you need to build your environment with >catkin b then you source your files with source devel\setup.bash and finaly
-you run roslaunch omtp_lecture8 omtp_force.launch
+First you need to build your environment with >catkin b then you source your files with >source devel\setup.bash and finaly
+you run >roslaunch omtp_lecture8 omtp_force.launch .This will show gazebo model of panda arm robot with box in front
+of it. When you open matlab with test_move_grasp.m and run it, simulated model will start moving in accordance with movemnt
+files in matlab. Unfortunately second exercise does not run on Melodic release of ROS, because of 
+error message >Failed to load plugin libgazebo_ros_ft_sensor.so. To run own DMP controlled simulation run MoveDMP_gazebo.m.
+you will have to restart gazebo before using matlab again, unfortunately.
+
 Exercise 2:
-In exercise 2, you are asked to make a Matlab function for detecting contacts based
-on simulated forces.
-• Start with placing the simulated robot into q1 configuration from the previous task.
-• Write a function which takes as an input (movement for an amount in a specific axis (vector [1x3])-
-Orientations are constant, desired force (vector [1x3]), time (constant in [s]), tcp (vector [1x3])). Start
-with CCmoveForM.mat function.
-• Add the necessary conditions in the function, so that the simulated forces will be monitored during the
-execution of the movement and stop the movement when the Fm = Fd.
-Trying
+CCmoveForM.mat function is not found in files so second exercise could not be finished. 
+There is one in older OMTP course, but does not seem to function correctly.
+
 ----
