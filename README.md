@@ -187,3 +187,20 @@ rosinit was run in order to establish the connection between MATLAB and ROS
 
 
 ## Lecture 8
+Exercise 1:
+In exercise 1, you are asked to couple the dynamic simulation with DMPs to execute
+a simple Pick and Place action with the simulated robot. To start:
+• Open the file Test_move_grasp.m and run the simulation and script. The robot should start to execute
+the pick and place task.
+• Modify the script in such a way that that you replace the point to point interpolation functions (Jmove
+and Cmove) with a function for linear DMPs and plan the paths between the given points.
+Exercise 2:
+In exercise 2, you are asked to make a Matlab function for detecting contacts based
+on simulated forces.
+• Start with placing the simulated robot into q1 configuration from the previous task.
+• Write a function which takes as an input (movement for an amount in a specific axis (vector [1x3])-
+Orientations are constant, desired force (vector [1x3]), time (constant in [s]), tcp (vector [1x3])). Start
+with CCmoveForM.mat function.
+• Add the necessary conditions in the function, so that the simulated forces will be monitored during the
+execution of the movement and stop the movement when the Fm = Fd.
+• Retract the robot.

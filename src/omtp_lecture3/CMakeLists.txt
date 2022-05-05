@@ -13,7 +13,7 @@ cmake_policy(SET CMP0054 NEW)
 find_package(catkin REQUIRED COMPONENTS
   cmake_modules
   gazebo_msgs
-  gazebo_plugins
+#  gazebo_plugins
   gazebo_ros
   geometry_msgs
   message_generation
