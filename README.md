@@ -244,17 +244,21 @@ For the app https://github.com/FlexBE/flexbe_app and for the behavior engine htt
 Their github was cloned into the workspace and build there with catkin build.
 The commands used was:
 
-`$ cd ~/omtp_course_ws/src`
-`$ git clone https://github.com/FlexBE/flexbe_app`
-`$ git clone https://github.com/team-vigir/flexbe_behavior_engine`
-`$ cd ..`
-`$ catkin build`
+```
+$ cd ~/omtp_course_ws/src
+$ git clone https://github.com/FlexBE/flexbe_app
+$ git clone https://github.com/team-vigir/flexbe_behavior_engine
+$ cd ..
+$ catkin build
+```
 
 FlexBE app and behavoir engine was launched with following command:
 
-`$ cd ~/omtp_course_ws`
-`$ source devel/setup.bash`
-`$ roslaunch flexbe_app flexbe_full.launch`
+```
+$ cd ~/omtp_course_ws
+$ source devel/setup.bash
+$ roslaunch flexbe_app flexbe_full.launch
+```
 
 <p class="aligncenter">
     <img src="Images/interface.png" width=80% height=80% align=center alt="FlexBE interface">
@@ -298,7 +302,6 @@ In the Runtime control the behavior can be excuted when the simulation in gazebo
 
 A custom FlexBE state for the Franka hand is found in `src/lecture4_files/omtp_factory_behaviors/omtp_factory_flexbe_states`. The moveit to joint state have been modified to fit the Franka hand by adding the joints of the Franka hand and joint config to it. Mimic have been removed due to unexpected behavior thus both finger joints needs to be included.
 
-#### 3) Error handling
 
 ## Lecture 5: Advanced Topic 1 - CNNs in Practical Robotic Applications
 
@@ -319,39 +322,45 @@ Next step is to upload the contents of the zip file into a folder in Google driv
 
 To start out with Anaconda have to be installed. Anacondas installation guide is found at `https://docs.anaconda.com/anaconda/install/linux/`. Next is to download the course files from lecture 5 and unloaded it the workspace. With that completed Anaconda enviroment can be setup with the following commands:
 
-`$ conda create --name omtp_py27 python=2.7`
-`$ conda activate omtp_py27`
+```
+$ conda create --name omtp_py27 python=2.7
+$ conda activate omtp_py27
+```
 
 Now the current terminal is in the omtp_py27 enviroment and ROS packages among stuff needs to be added to it, which is done with the following commands:
 
-`$ conda install -c conda-forge ros-rospy `
-`$ cd yolov3_pytorch_ros`
-`$ pip install –r requirements.txt`
-`$ cd models`
-`$ sh download_weights.sh`
-`$ cd ..`
-`$ cd src`
-`$ conda deactivate`
-`$ conda deactivate`
-`$chmod +x detector.py`
-`$ cd`
-`$ cd omtp_course_ws`
-`$ catkin build`
+```
+$ conda install -c conda-forge ros-rospy
+$ cd yolov3_pytorch_ros
+$ pip install –r requirements.txt
+$ cd models
+$ sh download_weights.sh
+$ cd ..
+$ cd src
+$ conda deactivate
+$ conda deactivate
+$chmod +x detector.py
+$ cd
+$ cd omtp_course_ws
+$ catkin build
+```
 
 With that the last step is to open 2 terminals and use the following commands:
 
 ##### Terminal 1
 
-`$ conda deactivate`
-`$ conda deactivate`
-`$ roslaunch omtp_lecture8 omtp_panda_2d_cam.launch`
+```
+$ conda deactivate`
+$ conda deactivate`
+$ roslaunch omtp_lecture8 omtp_panda_2d_cam.launch
+```
 
 ##### Terminal 2
 
-`$ conda activate omtp_py27`
-`$ roslaunch yolov3_pytorch_ros detector.launch`
-#### 3) Error handling
-
+```
+$ conda activate omtp_py27
+$ roslaunch yolov3_pytorch_ros detector.launch
+```
  
 ## Lecture 7: Guest Lecture - Robots in Contact - From Task Demonstration to Execution in Contact - Part 1
 
