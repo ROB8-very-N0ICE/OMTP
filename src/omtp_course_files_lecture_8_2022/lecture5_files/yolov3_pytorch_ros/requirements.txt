@@ -9,4 +9,4 @@ matplotlib
 future
 pyyaml
 empy
-opencv-python==3.4.0.14
+opencv-python>=4.8.1.78
